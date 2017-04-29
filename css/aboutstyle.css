@@ -1,0 +1,369 @@
+
+/*STYLE FOR HEADER*/
+header{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	height:100%;
+	width:60px;
+	z-index:1;
+	transition:.3s;
+}
+.header-open{
+	width:300px;
+}
+nav{
+	float:right;
+	width:0;
+	height:100%;
+	background:#000000;
+	overflow:hidden;
+	transition:.3s;
+}
+.nav-open{
+	width:240px;
+}
+nav ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	height:100%;
+}
+
+nav ul li:first-child{
+	padding:25px 0;
+	text-align:center;
+}
+.active {
+	border-bottom:1px solid #DC143C;
+	border-top:1px solid #DC143C;
+}
+nav ul li a{
+	display:inline-block;
+	width:100%;
+	padding:10px 20px;
+	font-size:18px;
+	color:#F0FFF0;
+	text-transform:uppercase;
+	text-decoration:none;
+	letter-spacing:1px;
+}
+nav ul li a:hover,
+nav ul li a:focus{
+	color:#F0FFF0;
+	text-decoration:none;
+}
+.menu-button{
+	position:fixed;
+	top:20px;
+	width:32px;
+	height:32px;
+	background:transparent;
+	border:none;
+	overflow:hidden;
+	padding:0;
+	}
+.menu-button:focus{
+	outline:none;
+}
+.menu-button:hover .top-line{
+	top:0;
+
+}
+.menu-button:hover .bottom-line{
+	bottom:0;
+}
+.menu-button.menu-button-open:hover .top-line{
+	top:-2px;
+}
+.menu-button.menu-button-open:hover .bottom-line{
+	bottom:-2px;
+}
+
+.line{
+	width:100%;
+	height:4px;
+	background:#F0FFF0;
+	position:absolute;
+	border:1px solid #000000;
+}
+.top-line{
+	top:4px;
+	left:0;
+	transition:.3s;
+}
+.middle-line{
+	top:50%;
+	left:0;
+	margin-top:-2px;
+	transition:.3s;
+	
+}
+.bottom-line{
+	bottom:4px;
+	left:0;
+	transition:.3s;
+}
+.menu-button-open{}
+.menu-button-open .top-line{
+	top:-2px;
+	width:50px;
+	transform-origin:0 2px;
+	transform:rotate(45deg);
+}
+.menu-button-open .middle-line{
+	transform:scale(0);
+}
+.menu-button-open .bottom-line{
+	bottom:-2px;
+	width:50px;
+	transform-origin:0 2px;
+	transform:rotate(-45deg);
+}
+/*STYLE FIRST-PAGE*/
+.first-page{
+	position:relative;
+	height:100vh;
+	background:
+			url("../img/firstPageBackgroundAbout.jpg");
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	z-index:0;
+}
+.first-page .arrow-down{
+	position:absolute;
+	width:31px;
+	height:31px;
+	top:85%;
+	left:50%;
+	background:url("../img/img-arrow-down.png");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	transform:translate(-50%,0);
+	
+}
+@keyframes translating {
+  0%   { transform: translate(-50%, 0) scale(1); }
+  25%  { transform: translate(-50%, 5px) scale(1.05); }
+  50%  { transform: translate(-50%, 10px) scale(1.1); }
+  75%  { transform: translate(-50%, 5px) scale(1.05); }
+  100% { transform: translate(-50%, 0px) scale(1); }
+}
+.first-page .arrow-down {
+ 	animation: translating 1s linear infinite;
+  }
+.first-page .logo-container{
+	padding-top:25px;
+	padding-left:3.9%;
+}
+.first-page .logo,
+nav ul li .logo{
+	text-transform:uppercase;
+	font-size:18px;
+	color:white;
+	padding-left:57px;
+	padding-top:10px;
+	padding-bottom:10px;
+	letter-spacing:2px;
+	text-decoration:none;
+	background:url("../img/cd-logo.png");
+	background-repeat:no-repeat;
+	background-size:179px 100%;
+	background-position:20px 50%;
+}
+.first-page .logo{
+	background-position:0 50%;
+}
+.first-page h3{
+	font-size:70px;
+	font-weight:100;
+	color:#ffffff;
+	letter-spacing:2px;
+	word-spacing:10px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:100%;
+	text-align:center;
+	transform:translate(-50%,-50%);
+}
+.second-page{
+	padding:13% 0;
+}
+.second-page p{
+	padding:0 10px;
+	font-size: 18px;
+}
+.third-page img{
+	width:100%;
+}
+.third-page h3{
+	text-transform: capitalize;
+    font-size: 26px;
+    color: #666666;
+    font-weight: bold;
+    margin-top: 7.5%;
+    margin-bottom: 15%;
+}
+.third-page p{
+    font-size: 18px;
+ }
+ .third-page ul{
+ 	list-style:none;
+ 	text-transform: capitalize;
+    font-size: 18px;
+    padding:0;
+ }
+/*STYLE FOOTER*/
+
+footer{
+	background:#DCDCDC;
+	text-align:center;
+	font-size:16px;
+	}
+footer .col-sm-6{
+	padding-top:3.42%;
+	padding-bottom:3.42%;
+
+}
+footer a{
+	text-decoration:none;
+	color:#333;
+}
+footer a:hover, a:focus {
+    color:#333;
+    text-decoration:none;
+}
+
+
+@media (min-width:992px) and (max-width:1199px) and (orientation:landscape){
+	
+	.third-page h3 {
+		margin-top: 5%;
+        margin-bottom: 5%;
+	}
+
+}
+@media (min-width:768px) and (max-width:991px) and (orientation:landscape){
+	
+
+	.third-page img {
+   		 display:none;
+	}
+	.third-page h3 {
+    	text-align:center;
+       	margin-bottom: 7.5%;
+       	margin-top:0;
+	}
+}
+@media (min-width:600px) and (max-width:767px) and (orientation:landscape){
+	
+	.third-page img {
+   		 display:none;
+	}
+	.third-page h3 {
+    	text-align:center;
+       	margin-bottom: 7.5%;
+       	margin-top:0;
+	}
+}
+
+@media (min-width:490px) and (max-width:599px) and (orientation:landscape){
+	
+	.third-page img {
+   		 display:none;
+	}
+	.third-page h3 {
+    	text-align:center;
+       	margin-bottom: 7.5%;
+       	margin-top:0;
+	}
+}
+@media(max-width:489px) and (orientation:landscape){
+	
+	.third-page img {
+   		 display:none;
+	}
+	.third-page h3 {
+    	text-align:center;
+       	margin-bottom: 7.5%;
+       	margin-top:0;
+	}
+}
+
+@media (max-height:360px) and (orientation:landscape){
+	nav ul li:first-child{
+		display:none;
+	}
+	.third-page img {
+   		 display:none;
+	}
+	.third-page h3 {
+    	text-align:center;
+       	margin-bottom: 7.5%;
+       	margin-top:0;
+	}
+}
+
+/*orientation:portrait*/
+@media(max-width:991px) and (orientation:portrait){
+	.first-page{
+    	height:60vh;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) and (orientation:portrait){
+	.third-page img {
+    	width: auto;
+    	max-width:50%;
+	}
+	.third-page h3{
+   		text-align:center;
+   }
+	
+}
+
+@media(min-width:480px) and (max-width:767px) and (orientation:portrait){
+	
+    .third-page img {
+    	width: auto;
+    	max-width:50%;
+	}
+    .third-page h3{
+   		text-align:center;
+   }
+	
+}
+@media(min-width:400px) and (max-width:479px) and (orientation:portrait){
+	.third-page img {
+    	width: auto;
+    	max-width:75%;
+	}
+}
+
+
+@media(min-width:320px) and (max-width:479px) and (orientation:portrait){
+	
+   .third-page h3{
+   		text-align:center;
+   }
+}
+
+
+@media(max-width:319px) and (orientation:portrait){
+	
+   .third-page h3{
+   		text-align:center;
+   }
+   .header-open{
+		width:200px;
+	}
+	.nav-open{
+		width:140px;
+	}
+	nav ul li:first-child{
+		display:none;
+	}
+}

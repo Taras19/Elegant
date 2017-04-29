@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CONTACT</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/contactstyle.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <button type="button" class="menu-button">
+            <span class="top-line line"></span>
+            <span class="middle-line line"></span>
+            <span class="bottom-line line"></span>
+        </button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="logo">elegant</a>
+                </li>
+                <li>
+                    <a href="index.html">home</a>
+                </li>
+                <li>
+                    <a href="ebout.html">about</a>
+                </li>
+                <li>
+                    <a href="work.html">work</a>
+                </li>
+                <li>
+                    <a href="project.html">project</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog</a>
+                </li>
+                <li class="active">
+                    <a href="#home">contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-fluid" id="home">
+        <div class="row first-page">
+            <div class="logo-container">
+                <a href="#" class="logo">elegant</a>
+            </div>
+            <a href="#nextPage" class="arrow-down"></a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row second-block" id="nextPage">
+            <div class="container">
+                <div class="row">
+                    <h4>this is it !</h4>
+                    <h3>contact us</h3>
+                </div>
+                <div class="row container-contact">
+                    <div class="col-sm-4 col-lg-3 col-lg-offset-2">
+                        <div class="container-color-first">
+                            <div class="horizontal-line"></div>
+                            <p>rua sepra pinto,<br>
+                            lisbon,portugal</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-lg-5">
+                        
+                            <div class="container-img-lisbon">
+                                <img src="img/img-contact-us.jpg" alt="lisbon">
+                            </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="row container-contact">
+                    <div class="col-sm-8 col-lg-5 col-lg-offset-2 ">
+                        <p class="text-contact">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, quam minima aliquam quos repudiandae dolor corrupti. Itaque iure perspiciatis nostrum, ipsam minima repellat molestiae aliquid nisi ipsum rem aspernatur provident consectetur, laudantium nulla, quibusdam quae labore dolor quos voluptas omnis magni ducimus ipsa. Ipsum, vero magnam sit perferendis repudiandae!</p>
+                    </div>
+                    <div class="col-sm-4 col-lg-3 container-height">
+                        <div class="container-color-second">
+                            <div class="horizontal-line"></div>
+                            <p><a href="tel:+88(0)1010000000">+88 (0) 101 0000000</a><br>
+                            <a href="tel:+88(0)1010000000">+88 (0) 101 0000000</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <a href="mailto:commercial@elegant.com?subject=HTML" class="text-lowercase"> Shote us an Email</a>
+            </div>
+        </div>
+    </div>
+        
+    
+        
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                   <div class="col-xs-12 col-sm-6">
+                        <span>© 2014 Designed and Developed by Diogo Dantas</span>
+                   </div>
+                   <div class="col-xs-12 col-sm-6">
+                        <a href="mailto:imdiogodantas@gmail.com?subject=HTML">Email: imdiogodantas@gmail.com
+                        </a>
+
+                   </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script>
+        var menuButton=document.querySelector("header .menu-button");
+        var header=document.querySelector("header");
+        var nav=document.querySelector("nav");
+            menuButton.addEventListener("click",function(){
+                    menuButton.classList.toggle("menu-button-open");
+                    header.classList.toggle("header-open");
+                     nav.classList.toggle("nav-open");  
+            })
+        var listMenuItems=document.querySelectorAll("nav ul li:not( :first-child)");
+                
+            for(var i=0;i<listMenuItems.length;i++){
+                listMenuItems[i].addEventListener("click",function(){
+                    menuButton.classList.toggle("menu-button-open");
+                    header.classList.toggle("header-open");
+                     nav.classList.toggle("nav-open");  
+                    })
+                }
+        var body=document.querySelector("body");
+        var headerWidth=window.getComputedStyle(header);
+            
+
+            body.addEventListener("click",function()
+
+                {
+                if(headerWidth.width==300+"px" || headerWidth.width==200+"px"){
+                    menuButton.classList.remove("menu-button-open");
+                    header.classList.remove("header-open");
+                     nav.classList.remove("nav-open"); 
+                     } 
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>WORK</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/workstyle.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <button type="button" class="menu-button">
+            <span class="top-line line"></span>
+            <span class="middle-line line"></span>
+            <span class="bottom-line line"></span>
+        </button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="logo">elegant</a>
+                </li>
+                <li>
+                    <a href="index.html">home</a>
+                </li>
+                <li>
+                    <a href="ebout.html">about</a>
+                </li>
+                <li class="active">
+                    <a href="#home">work</a>
+                </li>
+                <li>
+                    <a href="project.html">project</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-fluid" id="home">
+        <div class="row first-page">
+            <div class="logo-container">
+                <a href="#" class="logo">elegant</a>
+            </div>
+            <a href="#nextPage" class="arrow-down"></a>
+        </div>
+    </div> 
+    <div class="container-fluid">
+       <div class="row third-page" id="nextPage">
+            <h4>our amazing work</h4>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container">
+                        <div class="row">
+                            <h3>what we do</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla molestiae exercitationem fugiat sint dignissimos hic suscipit, praesentium reiciendis quae nesciunt cupiditate delectus laboriosam illo placeat quaerat asperiores repellendus minima. Maxime!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 img-container">
+                        <img src="img/img-work/img-work-1.jpg" alt="work"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 img-container">
+                        <img src="img/img-work/img-work-2.jpg" alt="work"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 img-container">
+                        <img src="img/img-work/img-work-3.jpg" alt="work"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4  col-lg-3 img-container">
+                        <img src="img/img-work/img-work-4.jpg" alt="work"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 img-container">
+                        <img src="img/img-work/img-work-5.jpg" alt="work"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 img-container">
+                        <img src="img/img-work/img-work-6.jpg" alt="work"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 hidden-md col-lg-3 img-container">
+                        <img src="img/img-work/img-work-7.jpg" alt="work"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 hidden-md col-lg-3 img-container">
+                        <img src="img/img-work/img-work-8.jpg" alt="work"></div>
+                </div>
+
+            </div>
+
+        </div> 
+    </div>  
+        
+        
+    
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                   <div class="col-xs-12 col-sm-6">
+                        <span>© 2014 Designed and Developed by Diogo Dantas</span>
+                   </div>
+                   <div class="col-xs-12 col-sm-6">
+                        <a href="mailto:imdiogodantas@gmail.com?subject=HTML">Email: imdiogodantas@gmail.com
+                        </a>
+
+                   </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script>
+        var menuButton=document.querySelector("header .menu-button");
+        var header=document.querySelector("header");
+        var nav=document.querySelector("nav");
+            menuButton.addEventListener("click",function(){
+                    menuButton.classList.toggle("menu-button-open");
+                    header.classList.toggle("header-open");
+                     nav.classList.toggle("nav-open");  
+            })
+        var listMenuItems=document.querySelectorAll("nav ul li:not( :first-child)");
+                
+            for(var i=0;i<listMenuItems.length;i++){
+                listMenuItems[i].addEventListener("click",function(){
+                    menuButton.classList.toggle("menu-button-open");
+                    header.classList.toggle("header-open");
+                     nav.classList.toggle("nav-open");  
+                    })
+                }
+        var body=document.querySelector("body");
+        var headerWidth=window.getComputedStyle(header);
+            
+
+            body.addEventListener("click",function()
+
+                {
+                if(headerWidth.width==300+"px" || headerWidth.width==200+"px"){
+                    menuButton.classList.remove("menu-button-open");
+                    header.classList.remove("header-open");
+                     nav.classList.remove("nav-open"); 
+                     } 
+            })
+    </script>
+</body>
+</html>
